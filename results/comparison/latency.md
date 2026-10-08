@@ -1,6 +1,6 @@
 # Hasil pengukuran latency
 
-Perangkat: NVIDIA GeForce RTX 4050 Laptop GPU (cuda); PyTorch 2.14.0+cu130.
+Perangkat: NVIDIA GeForce RTX 3060 8 GB (cuda); PyTorch 2.14.0+cu130.
 Input 224×224, batch 1, CPU threads 1, warm-up 20, iterasi 100.
 
 | Model | Mode | Median (ms) | Mean (ms) | P95 (ms) |
@@ -28,4 +28,4 @@ Anggaran PPT adalah target, bukan hasil pengukuran pipeline robot.
 Baris terbaru per model/mode dipilih dalam konfigurasi pengukuran yang sama, termasuk hash gambar.
 Auto memilih kelompok dengan konfigurasi terbanyak; jika seri, memilih kelompok paling baru.
 Konfigurasi yang tidak ada dalam kelompok tersebut tidak ditampilkan.
-Hasil satu sesi pada GPU laptop tidak menjamin kinerja pada komputer robot.
+Hasil satu sesi pada RTX 3060 8 GB tidak menjamin kinerja pada komputer robot.

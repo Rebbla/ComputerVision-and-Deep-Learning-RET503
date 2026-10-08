@@ -90,7 +90,7 @@ def export_summary(rows, output, stem):
               'Baris terbaru per model/mode dipilih dalam konfigurasi pengukuran yang sama, termasuk hash gambar.',
               'Auto memilih kelompok dengan konfigurasi terbanyak; jika seri, memilih kelompok paling baru.',
               'Konfigurasi yang tidak ada dalam kelompok tersebut tidak ditampilkan.',
-              'Hasil satu sesi pada GPU laptop tidak menjamin kinerja pada komputer robot.', '']
+              'Hasil satu sesi pada RTX 3060 8 GB tidak menjamin kinerja pada komputer robot.', '']
     (output / f'{stem}.md').write_text('\n'.join(lines), encoding='utf-8')
 
 

@@ -14,7 +14,7 @@ riwayat per epoch, dan checkpoint yang telah dievaluasi ulang.
 | Input | RGB 224×224; normalisasi ImageNet |
 | Training | 10 epoch per mode, batch 16, seed 42 |
 | Optimizer / scheduler | Adam / CosineAnnealingLR |
-| Perangkat sesi aktual | CUDA, NVIDIA GeForce RTX 4050 Laptop GPU |
+| Perangkat sesi aktual | CUDA, NVIDIA GeForce RTX 3060 8 GB |
 | Fallback script | CPU jika CUDA tidak tersedia |
 
 Train memakai RandomResizedCrop, HorizontalFlip, dan ColorJitter. Validation
@@ -70,7 +70,8 @@ kondisi input dan evaluasi yang sama.
 | partial | 2.857 | 2.856 | 2.880 |
 | scratch | 2.886 | 2.888 | 2.909 |
 
-Pengukuran: GPU yang sama, PyTorch 2.14.0+cu130, input 224×224, batch 1, CPU threads 1, 20 warm-up dan 100 iterasi.
+Pengukuran memakai satu RTX 3060 8 GB yang sama untuk semua mode, PyTorch
+2.14.0+cu130, input 224×224, batch 1, CPU threads 1, 20 warm-up dan 100 iterasi.
 Batang grafik menunjukkan median; penanda hitam menunjukkan P95. Data dipilih
 dari kelompok dengan perangkat, pengaturan, dan hash gambar yang sama.
 CSV sumber menyimpan riwayat pengukuran; tabel di atas memakai pengukuran GPU
@@ -78,7 +79,7 @@ terbaru yang juga dipakai pada grafik.
 
 Latency mencakup forward pass, belum mencakup kamera, preprocessing,
 postprocessing, dan ROS2. Acuan PPT adalah anggaran inferensi 35 ms dari
-sekitar 67 ms/frame (15 FPS). Nilai pada laptop ini belum membuktikan FPS
+sekitar 67 ms/frame (15 FPS). Angka di RTX 3060 8 GB ini belum membuktikan FPS
 keseluruhan pipeline atau kinerja pada komputer robot.
 
 - [Grafik latency tiga mode](results/latency_bar.png) · [SVG untuk PPT](results/latency_bar.svg)

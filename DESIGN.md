@@ -3,7 +3,8 @@
 Tujuan: klasifikasi box_merah dan box_cokelat serta membandingkan tiga mode
 pelatihan pada resnet50. Dataset 200 citra seimbang, disertai metadata.csv.
 Input 224×224; loss CrossEntropyLoss; output dua logits dengan label tercatat
-pada checkpoint. Perangkat CUDA otomatis, CPU jika CUDA tidak tersedia.
+pada checkpoint. Eksperimen dijalankan pada NVIDIA GeForce RTX 3060 8 GB melalui
+CUDA, dengan fallback CPU bila CUDA tidak tersedia.
 
 | Keluaran slide 23 | Berkas/folder pada proyek ini |
 |---|---|
