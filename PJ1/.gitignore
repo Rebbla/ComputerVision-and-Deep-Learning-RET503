@@ -1,0 +1,7 @@
+coco_unduhan/
+dataset_yolo/
+hasil_balik/
+*.pt
+runs/
+__pycache__/
+*.zip
